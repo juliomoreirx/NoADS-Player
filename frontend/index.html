@@ -1,41 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MultiStream Hub</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viewflix</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-white min-h-screen flex flex-col font-sans">
-
-    <!-- Topbar -->
-    <header class="bg-gray-800 p-4 shadow-md flex flex-wrap items-center gap-4 z-50">
-        <h1 class="text-2xl font-bold flex items-center gap-2 mr-4">
-            <span class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></span>
-            MultiStream
-        </h1>
-
-        <div class="flex gap-2 w-full sm:w-auto">
-            <select id="platformSelect" class="bg-gray-700 rounded border border-gray-600 px-3 py-2 focus:outline-none">
-                <option value="kick">Kick</option>
-                <option value="twitch">Twitch</option>
-            </select>
-            
-            <input type="text" id="channelInput" placeholder="Nome do canal..." 
-                   class="flex-1 px-4 py-2 bg-gray-700 rounded border border-gray-600 focus:outline-none">
-            
-            <button id="addStreamBtn" class="px-6 py-2 bg-blue-600 hover:bg-blue-500 rounded font-semibold transition-colors shadow-lg">
-                + Adicionar Stream
-            </button>
-        </div>
-    </header>
-
-    <!-- Container Dinâmico onde as streams vão entrar -->
-    <main id="streamsContainer" class="flex-1 p-2 grid grid-cols-1 gap-4 overflow-y-auto">
-        <!-- O JS vai injetar os cartões aqui -->
-    </main>
-
-    <script src="app.js"></script>
+<body class="bg-[#050508] text-white overflow-hidden">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
